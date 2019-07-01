@@ -1,0 +1,29 @@
+1. Tworzymy klasy:
+//   - KontoBankowe, które posiada pole:
+//          - double stanKonta;
+//   oraz metody:
+        -przelew przychodzący
+        -przelew wychodzący
+//
+//    - Bank, która posiada pola:
+//          - ExecutorService serwer = Executors.newSingleThreadExecutor();
+//          - KontoBankowe konto = new KontoBankowe();
+//    oraz metody:
+//          - dodajZleceniePrzelewu(double kwota, KierunekPrzelewu kierunek);
+//
+//          Powyższa metoda ma stworzyć nowy obiekt klasy "Zlecenie". Klasa Zlecenie
+//          Implementuje interfejs Runnable. Klasa zlecenie posiada 3 pola:
+//              - KontoBankowe kontoNaKtorePrzelacPieniadze;
+//              - double kwota;
+//              - KierunekPrzelewu kierunek
+//          Wszystkie parametry przyjmuje w konstruktorze.
+//
+//      Zlecenie przelwu po tym jak zostanie stworzone ma być przekazywane do serwera
+//      do wykonania. Zlecenie ma metodę "run" którą implementuje z interfejsu Runnable.
+//      Zaimplementuj tą metodę następująco:
+//          -metoda do konta bankowego które posiada jako pole dodaje lub odejmuje kwotę
+//          w zależności od tego jaki jest kierunek przelewu. Jeśli kierunek jest Przychodzący,
+//          to dodaje do stanu konta, jeśli jest wychodzący, to odejmuje.
+//
+//    w klasie bank zaimplementuj ostatnią, dodatkową metodę: "sprawdzStanKonta" która wypisuje
+//    ile pieniędzy zostało na koncie.
